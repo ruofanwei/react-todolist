@@ -1,4 +1,3 @@
-import "./App.css";
 import styled from "styled-components";
 
 const TitleWrapper = styled.div`
