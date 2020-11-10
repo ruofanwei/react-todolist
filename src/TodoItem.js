@@ -86,8 +86,8 @@ const ButtonWrapper = styled.div`
 
 function TodoItem() {
   const [todos, setTodos] = React.useState([
-    { id: 1, content: "冥想2分鐘", isDone: false, isShow: true },
-    { id: 2, content: "澆花", isDone: true, isShow: true },
+    { id: 1, content: "吃b群", isDone: false, isShow: true },
+    { id: 2, content: "實作五子棋", isDone: true, isShow: true },
   ]);
   const [value, setValue] = useState("");
   const [filter, setFilter] = useState("All");
