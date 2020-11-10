@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
-import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { useState, useRef } from "react";
 import TodoContent from "./TodoContent";
@@ -137,7 +135,7 @@ function TodoItem() {
 
   // 清空
   const clearAll = (id) => {
-    setTodos(todos.filter((todo) => todo.id == id));
+    setTodos(todos.filter((todo) => todo.id === id));
   };
   return (
     <TodoList>
