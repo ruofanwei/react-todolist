@@ -56,6 +56,8 @@
     ]
   },
   "devDependencies": {
-    "prettier": "2.1.2"
+    "css-loader": "^5.0.1",
+    "prettier": "2.1.2",
+    "style-loader": "^2.0.0"
   }
 }

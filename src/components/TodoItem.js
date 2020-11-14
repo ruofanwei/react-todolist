@@ -15,6 +15,9 @@ const TodoList = styled.div`
   background: #fff;
   border-radius: 10px;
   margin-bottom: 50px;
+  box-shadow: inset 0 -2px 2px 0 rgba(0, 0, 0, 0.2),
+    inset 2px 0 2px 0 rgba(0, 0, 0, 0.2), inset -2px 0 2px 0 rgba(0, 0, 0, 0.2),
+    inset 0 -2px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0px #272a27;
 `;
 const CoverImg = styled.div`
   background: url("https://i.imgur.com/YcPaK24.jpg");
@@ -62,9 +65,9 @@ const Card = styled.li`
 `;
 const Button = styled.button`
   padding: 4px 8px;
-  color: ${(props) => props.theme.colors.green};
+  color: ${(props) => props.theme.colors.pink};
   font-weight: bold;
-  background-color: ${(props) => props.theme.colors.pink};
+  background-color: ${(props) => props.theme.colors.blue};
   border: 2px solid ${(props) => props.theme.colors.blue};
   border-radius: 5px;
   outline: none;
@@ -93,7 +96,7 @@ function TodoItem() {
   const [filter, setFilter] = useState("All");
   const id = useRef(3);
 
-  // 新增
+  // add todo
   const handleClick = () => {
     if (value.trim() !== "") {
       setTodos([
@@ -103,8 +106,8 @@ function TodoItem() {
           isDone: false,
         },
         ...todos,
-      ]); //解構語法，後面加上要新增的東西
-      setValue(""); // 清空
+      ]);
+      setValue("");
       id.current++;
     }
   };
@@ -112,11 +115,11 @@ function TodoItem() {
   const handleInputChange = (e) => {
     setValue(e.target.value);
   };
-  // 刪除
+  // delete todo
   const handleDeleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
-  // 編輯
+  // edit todo
   const handleToggleClick = (id) => {
     setTodos(
       todos.map((todo) => {
@@ -128,12 +131,12 @@ function TodoItem() {
       })
     );
   };
-  // 篩選
+  // filter todo
   const showAll = () => setFilter("All");
   const showIsDone = () => setFilter("Complete");
   const showActive = () => setFilter("Active");
 
-  // 清空
+  // clear all todos
   const clearAll = (id) => {
     setTodos(todos.filter((todo) => todo.id === id));
   };

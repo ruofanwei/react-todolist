@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
-import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 const CardBody = styled.div``;
@@ -62,7 +60,7 @@ const EditTodo = styled.div`
   justify-content: flex-end;
 `;
 
-function TodoContent({ content, todo, handleDeleteTodo, handleToggleClick }) {
+function TodoContent({ todo, handleDeleteTodo, handleToggleClick }) {
   return (
     <CardList>
       <CardBody>
