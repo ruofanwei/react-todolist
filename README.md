@@ -1,2 +1,5 @@
-Build todolist app with React.
-🐣 [todolist-app](https://ruofanwei.github.io/react-todolist/)
+## Build todolist app with React.
+
+> [網站連結](https://ruofanwei.github.io/react-todolist/)
+
+![](https://i.imgur.com/eHauRdx.gif)
